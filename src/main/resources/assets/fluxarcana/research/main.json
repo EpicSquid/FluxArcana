@@ -1,0 +1,38 @@
+{
+	"entries": [
+		{
+			"key":"TA_INTRODUCTION",
+			"name":"thaumarcana.research.introduction",
+			"icons": ["thaumarcana:brass_chain"],
+			"meta": [ "SPIKY" ],
+			"category": "THAUMARCANA", "location": [ 0,0 ],
+			"parents": [],
+			"stages": [
+				{
+					"text":"thaumarcana.research.introduction.1",
+                    "required_knowledge":["OBSERVATION;BASICS;1", "OBSERVATION;INFUSION;1", "OBSERVATION;ARTIFICE;1", "OBSERVATION;ALCHEMY;1"]
+				},
+				{
+					"text":"thaumarcana.research.introduction.2"
+				}
+			]
+		},
+		{
+			"key":"TA_ROSEATE_BAND",
+			"name":"thaumarcana.research.roseate_band",
+			"icons": ["thaumarcana:roseate_band"],
+			"category": "THAUMARCANA", "location": [ 1,3 ],
+			"parents": [ "TA_INTRODUCTION" ],
+			"stages": [
+				{
+					"text":"thaumarcana.research.roseate_band.1",
+                    "required_knowledge":["THEORY;INFUSION;1"]
+				},
+				{
+					"text":"thaumarcana.research.roseate_band.2",  
+                    "recipes": ["thaumarcana:roseate_band"]
+				}
+			]
+		}
+	]
+}

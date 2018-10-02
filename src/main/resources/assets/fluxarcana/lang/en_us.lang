@@ -1,0 +1,23 @@
+itemGroup.thaumarcana=Thaumic Arcana
+
+thaumarcana.tooltip.storedhealth=Stored health: 
+
+item.iron_chain.name=Iron Chain
+item.brass_chain.name=Brass Chain
+item.thaumium_chain.name=Thaumium Chain
+item.roseate_band.name=Roseate Band
+item.warded_mail.name=Warded Mail
+item.hewn_hand.name=Hand of Temperance
+
+death.attack.blocked=%1$s's wards were overcome!
+death.attack.blocked.player=%1$s's wards were overcome by %2$s!
+
+tc.research_category.THAUMARCANA=Thaumic Arcana
+
+thaumarcana.research.introduction=Introduction
+thaumarcana.research.introduction.1=You believe that exploring the arcane may yield fruitful discoveries and useful items for your own benefit - perhaps you should investigate it further so you can better determine how you wish to use it?
+thaumarcana.research.introduction.2=Through your dabbling in the thaumic arts you find yourself with countless ideas and half-baked inventions that you haven't been able to fully realize. With your current understanding, you believe many of these may yet be attainable, and dedicate this portion of your Thaumonomicon to their pursuit.
+
+thaumarcana.research.roseate_band=Roseate Band
+thaumarcana.research.roseate_band.1=All living things exist in the aura and contain essentia...you now wonder if you could use your advances in infusion to create a device to heal living things.
+thaumarcana.research.roseate_band.2=By combining victus vis crystals with a golden apple upon the infusion altar, you engineer a crystal that should be able to contain life forces. The Roseate Band, when equipped, will slowly store up life energy when its bearer is at maximum health, up to a total of 10 hearts. When the bearer is harmed, the band will replenish their health from its buffer.
