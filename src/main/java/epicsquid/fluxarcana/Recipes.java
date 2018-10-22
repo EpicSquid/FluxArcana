@@ -20,7 +20,7 @@ import thaumcraft.api.items.ItemsTC;
 public class Recipes {
 
     public static ResourceLocation getRL(String s){
-    	return new ResourceLocation(ThaumArcana.MODID+":"+s);
+    	return new ResourceLocation(FluxArcana.MODID+":"+s);
     }
 
     public static void registerShaped(IForgeRegistry<IRecipe> registry, String name, ItemStack result, Object... ingredients){

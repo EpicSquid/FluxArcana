@@ -21,17 +21,17 @@ public class Registrar {
 
   @SubscribeEvent
   public void onRegister(RegisterContentEvent event) {
-    LibRegistry.setActiveMod(ThaumArcana.MODID, ThaumArcana.CONTAINER);
-    event.addItem(iron_chain = new ItemBase("iron_chain").setModelCustom(true).setCreativeTab(ThaumArcana.tab));
-    event.addItem(brass_chain = new ItemBase("brass_chain").setModelCustom(true).setCreativeTab(ThaumArcana.tab));
-    event.addItem(thaumium_chain = new ItemBase("thaumium_chain").setModelCustom(true).setCreativeTab(ThaumArcana.tab));
-    event.addItem(roseate_band = new ItemRoseateBand("roseate_band", BaubleType.RING).setModelCustom(true).setCreativeTab(ThaumArcana.tab));
-    event.addItem(warded_mail = new ItemWardedMail("warded_mail", BaubleType.BODY).setModelCustom(true).setCreativeTab(ThaumArcana.tab));
-    event.addItem(hewn_hand = new ItemHewnHand("hewn_hand").setModelCustom(true).setCreativeTab(ThaumArcana.tab));
+    LibRegistry.setActiveMod(FluxArcana.MODID, FluxArcana.CONTAINER);
+    event.addItem(iron_chain = new ItemBase("iron_chain").setModelCustom(true).setCreativeTab(FluxArcana.tab));
+    event.addItem(brass_chain = new ItemBase("brass_chain").setModelCustom(true).setCreativeTab(FluxArcana.tab));
+    event.addItem(thaumium_chain = new ItemBase("thaumium_chain").setModelCustom(true).setCreativeTab(FluxArcana.tab));
+    event.addItem(roseate_band = new ItemRoseateBand("roseate_band", BaubleType.RING).setModelCustom(true).setCreativeTab(FluxArcana.tab));
+    event.addItem(warded_mail = new ItemWardedMail("warded_mail", BaubleType.BODY).setModelCustom(true).setCreativeTab(FluxArcana.tab));
+    event.addItem(hewn_hand = new ItemHewnHand("hewn_hand").setModelCustom(true).setCreativeTab(FluxArcana.tab));
 
     ResearchCategories
-        .registerCategory("THAUMARCANA", null, new AspectList().add(Aspect.EARTH, 1), new ResourceLocation(ThaumArcana.MODID, "textures/researchicon.png"),
+        .registerCategory("THAUMARCANA", null, new AspectList().add(Aspect.EARTH, 1), new ResourceLocation(FluxArcana.MODID, "textures/researchicon.png"),
             new ResourceLocation(Thaumcraft.MODID, "textures/gui/gui_research_back_1.jpg"));
-    ThaumcraftApi.registerResearchLocation(new ResourceLocation(ThaumArcana.MODID + ":research/main"));
+    ThaumcraftApi.registerResearchLocation(new ResourceLocation(FluxArcana.MODID + ":research/main"));
   }
 }

@@ -14,12 +14,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = ThaumArcana.MODID, name = ThaumArcana.NAME, version = ThaumArcana.VERSION)
-public class ThaumArcana
+@Mod(modid = FluxArcana.MODID, name = FluxArcana.NAME, version = FluxArcana.VERSION, dependencies = "required-before:mysticallib")
+public class FluxArcana
 {
     public static final String MODID = "fluxarcana";
-    public static final String NAME = "Thaumic Arcana";
-    public static final String VERSION = "0.1";
+    public static final String NAME = "Flux Arcana";
+    public static final String VERSION = "@VERSION@";
     public static ModContainer CONTAINER = null;
 
     private static Logger logger;
