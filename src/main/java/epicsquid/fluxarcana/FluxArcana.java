@@ -1,5 +1,6 @@
 package epicsquid.fluxarcana;
 
+import epicsquid.mysticallib.MysticalLib;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = FluxArcana.MODID, name = FluxArcana.NAME, version = FluxArcana.VERSION, dependencies = "required-before:mysticallib")
+@Mod(modid = FluxArcana.MODID, name = FluxArcana.NAME, version = FluxArcana.VERSION, dependencies = "required-after:mysticallib@[" + MysticalLib.VERSION + ",)")
 public class FluxArcana
 {
     public static final String MODID = "fluxarcana";
