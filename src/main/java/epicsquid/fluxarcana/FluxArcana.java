@@ -1,5 +1,7 @@
 package epicsquid.fluxarcana;
 
+import org.apache.logging.log4j.Logger;
+
 import epicsquid.mysticallib.MysticalLib;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -13,39 +15,38 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import org.apache.logging.log4j.Logger;
+@Mod(modid = FluxArcana.MODID, name = FluxArcana.NAME, version = FluxArcana.VERSION, dependencies = FluxArcana.DEPENDENCIES)
+public class FluxArcana {
+  public static final String MODID = "fluxarcana";
+  public static final String NAME = "Flux Arcana";
+  public static final String VERSION = "@VERSION@";
+  public static ModContainer CONTAINER = null;
+  public static final String DEPENDENCIES = "required-before:mysticallib";
 
-@Mod(modid = FluxArcana.MODID, name = FluxArcana.NAME, version = FluxArcana.VERSION, dependencies = "required-after:mysticallib@[" + MysticalLib.VERSION + ",)")
-public class FluxArcana
-{
-    public static final String MODID = "fluxarcana";
-    public static final String NAME = "Flux Arcana";
-    public static final String VERSION = "@VERSION@";
-    public static ModContainer CONTAINER = null;
+  private static Logger logger;
 
-    private static Logger logger;
-	
-	public static CreativeTabs tab = new CreativeTabs(MODID) {
-    	@Override
-    	public String getTabLabel(){
-    		return MODID;
-    	}
-		@Override
-		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem(){
-			return new ItemStack(Registrar.roseate_band,1);
-		}
-	};
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event){
-    	CONTAINER = Loader.instance().activeModContainer();
-        logger = event.getModLog();
-        MinecraftForge.EVENT_BUS.register(new Registrar());
-        MinecraftForge.EVENT_BUS.register(new Recipes());
+  public static CreativeTabs tab = new CreativeTabs(MODID) {
+    @Override
+    public String getTabLabel() {
+      return MODID;
     }
 
-    @EventHandler
-    public void init(FMLInitializationEvent event){
+    @Override
+    @SideOnly(Side.CLIENT)
+    public ItemStack getTabIconItem() {
+      return new ItemStack(Registrar.roseate_band, 1);
     }
+  };
+
+  @EventHandler
+  public void preInit(FMLPreInitializationEvent event) {
+    CONTAINER = Loader.instance().activeModContainer();
+    logger = event.getModLog();
+    MinecraftForge.EVENT_BUS.register(new Registrar());
+    MinecraftForge.EVENT_BUS.register(new Recipes());
+  }
+
+  @EventHandler
+  public void init(FMLInitializationEvent event) {
+  }
 }
